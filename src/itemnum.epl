@@ -1,0 +1,26 @@
+;clear buffer
+N
+;set width
+q357
+;set height
+Q215,20
+;dark labels
+D12
+; go fast
+S5
+
+;code 128-B barcode
+B1,10,0,1B,2,8,80,N,"${ITEM_NUMBER}"
+
+; left, top, rotation, font (0-5), leave alone
+A30,100,0,2,2,2,N,"${ITEM_NUMBER}"
+
+A300,20,0,5,2,2,N,"U"
+
+
+A80,170,0,1,2,2,N,"${DATE}"
+
+
+
+; hOW MANy COPIES
+P1
